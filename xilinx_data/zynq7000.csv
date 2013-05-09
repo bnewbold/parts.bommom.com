@@ -1,0 +1,25 @@
+Device Number,Z-7010,,Z-7020,,Z-7030,,,Z-7045,,,Z-7100,
+Part Number Prefix,XC7Z010,,XC7Z020,,XC7Z030,,,XC7Z045,,,XC7Z100,
+Max Processor Frequency,800 MHz,,800 MHz,,1 Ghz,,,1 Ghz,,,1 Ghz,
+Xilinx FPGA Equivalent,Artix7,,Artix7,,Kintex7,,,Kintex7,,,Kintex7,
+Look-Up Tables (LUTs),17600,,53200,,78600,,,218600,,,277400,
+Flip-Flops,35200,,106400,,157200,,,437200,,,554800,
+BRAM (# 36Kb Blocks),240 KB (60),,560 KB (140),,1060 KB (265),,,2180 KB (545),,,3020 KB (755),
+DSP Slices (18x MACCs),80,,220,,400,,,900,,,2020,
+Peak DSP Performance (Symmetric FIR),100 GMACs,,276 GMACs,,593 GMACs,,,1334 GMACs,,,2622 GMACs,
+PCI Express,n/a,,n/a,,Gen2 x4,,,Gen2 x8,,,Gen2 x8,
+Package,CLG225,CLG400,CLG400,CLG484,FBG484,FBG676,FFG676,FBG676,FFG676,FFG900,FFG900,FFG1156
+SoC I/O pins (excld. DDR),32,54,54,54,54,54,54,54,54,54,54,54
+SelectIO Pins,54,100,125,200,100,100,100,100,100,212,212,250
+High-Speed SelectIO Pins,n/a,n/a,n/a,n/a,63,150,150,150,150,150,150,150
+Serial Transceivers (GTP),n/a,n/a,n/a,n/a,4,4,4,8,8,16,16,16
+Max Transceiver Speed,n/a,n/a,n/a,n/a,6.6 Gb/s,6.6 Gb/s,12.5 Gb/s,6.6 Gb/s,12.5 Gb/s,12.5 Gb/s,10.3 Gb/s,10.3 Gb/s
+###,,,,,,,,,,,,
+CLG225,54/0,,,,,,,,,,,
+CLG400,,100/0,125/0,,,,,,,,,
+CLG484,,,,200/0,,,,,,,,
+FBG484,,,,,100/63,,,,,,,
+FBG676,,,,,,100/150,,100/150,,,,
+FFG676,,,,,,,100/150,,100/150,,,
+FFG900,,,,,,,,,,212/150,212/150,
+FFG1156,,,,,,,,,,,,250/150
