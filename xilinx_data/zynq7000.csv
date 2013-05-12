@@ -1,5 +1,5 @@
-Device Number,Z-7010,,Z-7020,,Z-7030,,,Z-7045,,,Z-7100,
 Part Number Prefix,XC7Z010,,XC7Z020,,XC7Z030,,,XC7Z045,,,XC7Z100,
+Device Number,Z-7010,,Z-7020,,Z-7030,,,Z-7045,,,Z-7100,
 Max Processor Frequency,800 MHz,,800 MHz,,1 Ghz,,,1 Ghz,,,1 Ghz,
 Xilinx FPGA Equivalent,Artix7,,Artix7,,Kintex7,,,Kintex7,,,Kintex7,
 Look-Up Tables (LUTs),17600,,53200,,78600,,,218600,,,277400,
