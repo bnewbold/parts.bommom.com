@@ -1,0 +1,9 @@
+
+# copy this file to "settings.py", then edit the below
+PORT = 8080
+HOST = '127.0.0.1'
+DEBUG = True
+
+OCTOPART_CACHE_FOLDER = './cache'
+OCTOPART_API_KEY = 'CHANGEME'
+OCTOPART_BATCH_SIZE = 20

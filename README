@@ -1,0 +1,10 @@
+
+Install:
+
+    python-flask
+
+Copy ./settings.py.example to ./settings.py and edit the Octopart API key.
+
+Run:
+
+    ./partmom.py

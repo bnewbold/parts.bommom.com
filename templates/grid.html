@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}partmom: {{ grid.vendor }} {{ grid.familyname }}{% endblock %}
+{% block content %}
+<h1>{{ grid.vendor }} {{ grid.familyname }}</h1>
+
+{% for spec in grid.shared_specs %}
+   <b>{{ spec }}:</b> {{ grid.shared_specs[spec] }}<br>
+{% endfor %}
+<br>
+
+<table>
+{% for row in grid.data_table %}
+<tr>
+    {% for cell in row %}
+    <td colspan="{{ cell[0] }}">{{ cell[1] }}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+<tr>
+<td>Price: </td>
+{% for cell in grid.price_row %}
+    <td class="{{ cell.css }}">
+    {% if cell.url %}<a href="{{ cell.url }}">{% endif %}
+    {{ cell.price }}
+    {% if cell.url %}</a>{% endif %}
+    </td>
+{% endfor %}
+</tr>
+
+{% for row in grid.package_table %}
+<tr>
+    {% for cell in row %}
+    <td>{{ cell }}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+<tr>
+<td>All Parts: </td>
+{% for cell in grid.suffix_row %}
+<td>
+    {% for part in cell %}
+    {% if part.url %}<a href="{{ part.url }}">{{ part.suffix }}</a>
+    {% else %}{{ part.suffix }}
+    {% endif %}<br>
+    {% endfor %}
+</td>
+{% endfor %}
+</tr>
+
+</table>
+{% endblock %}
