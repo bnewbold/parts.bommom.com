@@ -1,3 +1,12 @@
-Widgets,123
-Whatchamecallems,Gazmo
-Yub Yubs,3840
+Processor Core, Dual-Core ARM Cortex-A9 MPCore
+Processor Extensions, NEON & Single / Double Precision Floating Point for each processor
+L1 Cache, 32 KB Instruction, 32 KB Data per processor
+L2 Cache, 512 KB
+On-Chip Memory, 256 KB
+External Memory,"16bit or 32bit DDR3, DDR3L, DDR2, LPDDR3 (1GB of address space)"
+External Static Memory Support,"2x Quad-SPI, NAND, NOR"
+DMA Channels, 8 (4 dedicated to Programmable Logic)
+Peripherals,"2x UART, 2x CAN 2.0B, 2x I2C, 2x SPI, 4x 32b GPIO"
+Peripherals w/ built-in DMA,"2x USB 2.0 (OTG), 2x Tri-mode Gigabit Ethernet, 2x SD/SDIO"
+Security,"RSA Authentication, and AES and SHA 256b Decryption and Authentication for Secure Boot"
+PS-PL Primary Interfaces,"2x AXI 32b Master 2x AXI 32b Slave; 4x AXI 64b/32b Memory; AXI 64b ACP; 16 Interrupts"

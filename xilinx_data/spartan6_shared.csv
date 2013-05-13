@@ -1,3 +1,6 @@
-Widgets,123
-Whatchamecallems,Gazmo
-Yub Yubs,3840
+Clock Networks, 16
+Silicon Process, 45nm
+I/O Pin Logic Levels, 3.3v and 1.2v
+I/O Pin drive current, 24mA per pin
+Differential I/O Speed, 1,080 Mb/s
+Configuration Interfaces,"SPI, NOR flash, JTAG"
