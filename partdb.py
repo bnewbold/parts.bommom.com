@@ -8,6 +8,7 @@ import settings
 import octopart
 
 today = datetime.datetime.utcnow().strftime("%Y%m%d")
+#today = "20130510"
 
 def safe(s): #TODO: this
     return s.lower()

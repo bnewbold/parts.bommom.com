@@ -32,7 +32,7 @@ def fetch_bom(bom):
 
     for result in results:
         pid = result['reference']
-        print "len(items[%s]): %d" % (pid, len(result['items']))
+        #print "len(items[%s]): %d" % (pid, len(result['items']))
         if len(result['items']) == 0:
             reply[pid] = None
         else:

@@ -24,7 +24,7 @@ def process_csv(data_path, shared_path, speed_grades, temp_grade):
     package_table = raw_data[split_row+1:]
     prefix_list = raw_data[0][1:]
 
-    # need to infill sparse prefix_lists (eg, xilinx zynq)
+    # infill sparse prefix_lists (eg, for xilinx zynq)
     last = None
     for i in range(len(prefix_list)):
         if not prefix_list[i]:
@@ -55,7 +55,7 @@ def process_csv(data_path, shared_path, speed_grades, temp_grade):
         row = [[1, raw_row[0]], ]
         for raw_cell in raw_row[1:]:
             if raw_cell:
-                row.append([1, raw_cell])
+                row.append([1, raw_cell.replace('n/a', '-')])
             else:
                 row[-1][0] += 1
         data_table.append(row)

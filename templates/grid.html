@@ -3,22 +3,31 @@
 {% block content %}
 <h1>{{ grid.vendor }} {{ grid.familyname }}</h1>
 
+<table class="sharedspecs">
 {% for spec in grid.shared_specs %}
-   <b>{{ spec }}:</b> {{ grid.shared_specs[spec] }}<br>
+    <tr><th>{{ spec }}</th>
+        <td>{{ grid.shared_specs[spec] }}</td>
+    </tr>
 {% endfor %}
+</table>
 <br>
 
-<table>
+<table class="grid">
 {% for row in grid.data_table %}
-<tr>
+<tr class="{{ loop.cycle("evenrow", "oddrow") }} {% if loop.first %}strongrow{% endif %}">
     {% for cell in row %}
-    <td colspan="{{ cell[0] }}">{{ cell[1] }}</td>
+    {% if loop.first %}
+        <th class="colheader" colspan="{{ cell[0] }}">{{ cell[1] }}</th>
+    {% else %}
+        <td colspan="{{ cell[0] }}">{{ cell[1] }}</td>
+    {% endif %}
     {% endfor %}
+    {% if loop.first %}</span>{% endif %}
 </tr>
 {% endfor %}
 
-<tr>
-<td>Price: </td>
+<tr class="strongrow">
+<th class="colheader">Price</th>
 {% for cell in grid.price_row %}
     <td class="{{ cell.css }}">
     {% if cell.url %}<a href="{{ cell.url }}">{% endif %}
@@ -29,15 +38,19 @@
 </tr>
 
 {% for row in grid.package_table %}
-<tr>
+<tr class="{{ loop.cycle("evenrow", "oddrow") }}">
     {% for cell in row %}
-    <td>{{ cell }}</td>
+    {% if loop.first %}
+        <th class="colheader">Pins in {{ cell }} Package</th>
+    {% else %}
+        <td>{{ cell }}</td>
+    {% endif %}
     {% endfor %}
 </tr>
 {% endfor %}
 
-<tr>
-<td>All Parts: </td>
+<tr class="strongrow allparts">
+<th class="colheader">All Parts</th>
 {% for cell in grid.suffix_row %}
 <td>
     {% for part in cell %}
@@ -50,4 +63,10 @@
 </tr>
 
 </table>
+
+<div class="fineprint">
+Fineprint: Prices from <a href="http://octopart.com">Octopart</a> API and only
+include "authorized" distributors, regardless of stock. Some distributors
+(Avnet?) do not allow their pricing to be included in the API results.
+</div>
 {% endblock %}
