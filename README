@@ -1,7 +1,8 @@
 
 Install:
 
-    python-flask
+    python-flask (with apt)
+    frozen-flask (with pip)
 
 Copy ./settings.py.example to ./settings.py and edit the Octopart API key.
 
