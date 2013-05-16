@@ -15,6 +15,14 @@ app.config.from_object(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/xilinx/artix7/', methods=['GET'])
+def xilinx_artix7():
+    return render_template('grid.html', grid=xilinx.artix7_grid)
+
+@app.route('/xilinx/kintex7/', methods=['GET'])
+def xilinx_kintex7():
+    return render_template('grid.html', grid=xilinx.kintex7_grid)
+
 @app.route('/xilinx/spartan6/', methods=['GET'])
 def xilinx_spartan6():
     return render_template('grid.html', grid=xilinx.spartan6_grid)

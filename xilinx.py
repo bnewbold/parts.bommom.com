@@ -83,6 +83,23 @@ def process_csv(data_path, shared_path, speed_grades, temp_grade):
                 suffix_row=suffix_row)
 
 today = partdb.today
+
+kintex7_grid = process_csv(
+    'xilinx_data/kintex7.csv',
+    'xilinx_data/kintex7_shared.csv',
+    speed_grades=['-1', '-2'],
+    temp_grade='C') # E, I
+kintex7_grid['vendor'] = "Xilinx"
+kintex7_grid['familyname'] = "Kintex7"
+
+artix7_grid = process_csv(
+    'xilinx_data/artix7.csv',
+    'xilinx_data/artix7_shared.csv',
+    speed_grades=['-2', '-3'],
+    temp_grade='C') # E, I
+artix7_grid['vendor'] = "Xilinx"
+artix7_grid['familyname'] = "Artix7"
+
 spartan6_grid = process_csv(
     'xilinx_data/spartan6.csv',
     'xilinx_data/spartan6_shared.csv',
@@ -90,6 +107,7 @@ spartan6_grid = process_csv(
     temp_grade='C')
 spartan6_grid['vendor'] = "Xilinx"
 spartan6_grid['familyname'] = "Spartan6"
+
 zynq7000_grid = process_csv(
     'xilinx_data/zynq7000.csv',
     'xilinx_data/zynq7000_shared.csv',
