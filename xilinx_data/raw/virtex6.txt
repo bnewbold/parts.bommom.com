@@ -1,0 +1,42 @@
+
+                    Configurable Logic                Block RAM Blocks                                   Maximum
+                       Blocks (CLBs)                                                                   Transceivers
+             Logic                                                                 Interface                         Total    Max
+   Device    Cells
+                                         DSP48E1
+                                         Slices(2)                       MMCMs(4) Blocks for Ethernet
+                                                                                                   (5)                I/O    User
+                                 Max                                Max           PCI Express MACs                  Banks(6) I/O(7)
+                   Slices(1) Distributed           18 Kb(3) 36 Kb   (Kb)                               GTX     GTH
+                              RAM (Kb)
+Part Number,Logic Cells,Slices,Max Distributed RAM (Kb),DSP48E1 Slices,Block RAM Blocks 18 Kb,Block RAM Blocks 36 Kb,Block RAM Blocks Max (Kb),MMCMs,PCI Express,Ethernet MACs,GTX,GTH,Total I/O Banks,Max User I/O
+XC6VLX75T   74,496 11,640       1,045      288       312     156   5,616    6          1        4      12        0     9      360
+XC6VLX130T 128,000  20,000      1,740      480       528     264   9,504   10          2        4      20        0    15      600
+XC6VLX195T 199,680  31,200      3,040      640       688     344  12,384   10          2        4      20        0    15      600
+XC6VLX240T 241,152  37,680      3,650      768       832     416  14,976   12          2        4      24        0    18      720
+XC6VLX365T 364,032  56,880      4,130      576       832     416  14,976   12          2        4      24        0    18      720
+XC6VLX550T 549,888  85,920      6,200      864      1,264    632  22,752   18          2        4      36        0    30     1200
+XC6VLX760  758,784 118,560      8,280      864      1,440    720  25,920   18          0        0       0        0    30     1200
+XC6VSX315T 314,880 49,200       5,090     1,344     1,408    704  25,344   12          2        4      24        0    18      720
+XC6VSX475T 476,160 74,400       7,640     2,016     2,128 1,064 38,304     18          2        4      36        0    21      840
+XC6VHX250T 251,904  39,360      3,040      576      1,008    504  18,144   12          4        4      48        0     8      320
+XC6VHX255T 253,440  39,600      3,050      576      1,032    516  18,576   12          2        2      24       24    12      480
+XC6VHX380T 382,464  59,760      4,570      864      1,536    768  27,648   18          4        4      48       24    18      720
+XC6VHX565T 566,784  88,560      6,370      864      1,824    912  32,832   18          4        4      48       24    18      720
+
+###, GTX (GTH) Pins
+Package,FF484+FFG484,FF784+FFG784,FF1156+FF1156,FF1759+FFG1759,FF1760+FFG1760,FF1154+FFG1154,FF1155+FFG1155,FF1923+FFG1923,FF1924+FFG1924
+XC6VLX75T, 8 240    ,12 360      ,             ,              ,              ,              ,              ,              ,                  
+XC6VLX130T,8 240    ,12 400      ,20 600       ,              ,              ,              ,              ,              ,                 
+XC6VLX195T,         ,12 400      ,20 600       ,              ,              ,              ,              ,              ,                 
+XC6VLX240T,         ,12 400      ,20 600       , 24 720       ,              ,              ,              ,              ,                     
+XC6VLX365T,         ,            ,20 600       , 24 720       ,              ,              ,              ,              ,                     
+XC6VLX550T,         ,            ,             , 36 840       , 0 1200       ,              ,              ,              ,                                     
+XC6VLX760,          ,            ,             ,              , 0 1200       ,              ,              ,              ,                                     
+XC6VSX315T,         ,            ,20 600       , 24 720       ,              ,              ,              ,              ,                     
+XC6VSX475T,         ,            ,20 600       , 36 840       ,              ,              ,              ,              ,                     
+XC6VHX250T,         ,            ,             ,              ,              ,  48 0 320    ,              ,              ,                     
+XC6VHX255T,         ,            ,             ,              ,              ,              , 24 12 440    , 24 24 480    ,
+XC6VHX380T,         ,            ,             ,              ,              ,  48 0 320    , 24 12 440    , 40 24 720    , 48 24 640
+XC6VHX565T,         ,            ,             ,              ,              ,              ,              , 40 24 720    , 48 24 640
+

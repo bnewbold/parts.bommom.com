@@ -1,0 +1,24 @@
+
+             System Equivalent               Distributed Block RAM  In-System    Dedicated                Maximum
+   Device                       CLBs  Slices                                                 DSP48As DCMs
+              Gates Logic Cells              RAM Bits(1)   Bits(1) Flash Bits(2) Multipliers              User I/O
+ XC3S50A/AN    50K     1,584     176    704      11K         54K        1M            3          -     2    144
+XC3S200A/AN   200K     4,032     448   1,792     28K        288K        4M           16          -     4   248(3)
+XC3S400A/AN   400K     8,064     896   3,584     56K        360K        4M           20          -     4    311
+XC3S700A/AN   700K    13,248    1,472  5,888     92K        360K        8M           20          -     8    372
+XC3S1400A/AN 1400K    25,344    2,816 11,264    176K        576K       16M           32          -     8    502
+ XC3SD1800A  1800K    37,440    4,160 16,640    260K       1,512K        -            -         84     8    519
+ XC3SD3400A  3400K    53,712    5,968 23,872    373K       2,268K        -            -        126     8    469
+
+
+                 VQ100      TQ144      FT256   FG320   FG400   CS484   FG484   FG676
+     Device
+                VQG100     TQG144     FTG256  FGG320  FGG400  CSG484  FGG484  FGG676
+ Body Size (mm) 14 x 14(1) 20 x 20(1) 17 x 17 19 x 19 21 x 21 19 x 19 23 x 23 27 x 27
+XC3S50A/AN        68(2)       108       144      -       -       -       -       -
+XC3S200A/AN       68(2)         -       195    248(2)    -       -       -       -
+XC3S400A/AN          -          -       195    251(2)   311      -       -       -
+XC3S700A/AN          -          -      161(2)    -     311(2)    -      372      -
+XC3S1400A/AN         -          -      161(2)    -       -       -      375     502
+XC3SD1800A          -          -         -       -       -      309      -      519
+XC3SD3400A          -          -         -       -       -      309      -      469

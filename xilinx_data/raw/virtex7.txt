@@ -1,0 +1,49 @@
+
+                      Configurable Logic               Block RAM Blocks(4)
+                         Blocks (CLBs)
+             Logic                           DSP                            CMTs PCIe             XADC   Total I/O  Max
+ Device(1)                                                                            GTX GTH GTZ                  User   SLRs(9)
+             Cells                 Max     Slices(3)                         (5)  (6)             Blocks Banks(7)  I/O(8)
+                     Slices(2) Distributed           18 Kb   36 Kb    Max
+                                RAM (Kb)                              (Kb)
+Part Number,Logic Cells,Slices,Max Distributed RAM (Kb),DSP Slices,Block RAM Blocks 18 Kb,Block RAM Blocks 36 Kb,Block RAM Blocks Max (Kb),CMTs,PCIe,GTX,GTH,GTZ,XADC Blocks,Total I/O Banks,Max User I/O,SLRs
+XC7V585T    582720   91050      6938     1260    1590    795   28620  18    3   36   0   0    1      17      850    N/A
+XC7V2000T   1954560 305400      21550    2160    2584   1292   46512  24    4   36   0  0     1      24     1200    4
+XC7VX330T   326400   51000      4388     1120    1500    750   27000  14    2    0  28  0     1      14      700    N/A
+XC7VX415T   412160   64400      6525     2160    1760    880   31680  12    2    0  48  0     1      12      600    N/A
+XC7VX485T   485760   75900      8175     2800    2060   1030   37080  14    4   56   0  0     1      14      700    N/A
+XC7VX550T   554240   86600      8725     2880    2360   1180   42480  20    2    0  80  0     1      16      600    N/A
+XC7VX690T   693120  108300      10888    3600    2940   1470   52920  20    3    0  80   0    1      20     1000   N/A
+XC7VX980T   979200  153000      13838    3600    3000   1500   54000  18    3    0  72  0     1      18      880    N/A
+XC7VX1140T  1139200 178000      17700    3360    3760   1880   67680  24    4    0  96  0     1      22     1100    4
+XC7VH580T   580480   90700      8850     1680    1880    940   33840  12    2    0  48   8    1      12      600     2
+XC7VH870T   876160  136900      13275    2520    2820   1410   50760  18    3    0  72  16    1      13      650     3
+
+
+ Package(1)       FFG1157                FFG1761(2)              FHG1761(2)             FLG1925
+ Size (mm)         35 x 35               42.5 x 42.5               45 x 45               45 x 45
+ Ball Pitch          1.0                     1.0                     1.0                   1.0
+                           I/O                      I/O                    I/O                 I/O
+  Device    GTX GTH                 GTX GTH                  GTX GTH                GTX
+                       HR(3)  HP(4)            HR(3)   HP(4)           HR(3)  HP(4)     HR(3)      HP(4)
+XC7V585T     20  0       0     600   36   0     100     750
+XC7V2000T                                                     36  0      0     850   16   0        1,200
+XC7VX330T     0  20      0     600   0   28      50     650
+XC7VX415T     0  20      0     600
+XC7VX485T    20  0       0     600   28   0      0      700
+XC7VX550T
+XC7VX690T     0  20      0     600   0   36      0      850
+XC7VX980T
+XC7VX1140T
+
+
+ Package(1)     FFG1158          FFG1926(2)       FLG1926(2)         FFG1927         FFG1928(3)       FLG1928(3)         FFG1930(4)         FLG1930(4)
+XC7V585T
+XC7V2000T
+XC7VX330T
+XC7VX415T     0    48  0 350                                      0     48  0 600
+XC7VX485T    48     0  0 350                                      56     0  0 600                                     24     0   0  700
+XC7VX550T     0    48  0 350                                      0     80  0 600
+XC7VX690T     0    48  0 350   0     64  0 720                    0     80  0 600                                      0     24  0 1000
+XC7VX980T                      0     64  0 720                                      0    72  0 480                     0     24  0  900
+XC7VX1140T                                       0    64 0  720                                      0    96 0  480                       0     24  0 1100
