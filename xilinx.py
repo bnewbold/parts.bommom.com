@@ -37,7 +37,7 @@ def process_csv(data_path, shared_path, speed_grades, temp_grade):
     for row_num in range(len(package_table)):
         package = package_table[row_num][0]
         for cell_num in range(len(package_table[row_num][1:])):
-            cell = package_table[row_num][cell_num+1]
+            cell = package_table[row_num][cell_num+1].strip()
             if cell:
                 for speed_grade in speed_grades:
                     suffix = speed_grade + package + temp_grade
@@ -87,7 +87,7 @@ today = partdb.today
 spartan3a_grid = process_csv(
     'xilinx_data/spartan3a.csv',
     'xilinx_data/spartan3a_shared.csv',
-    speed_grades=['-1', '-2'],
+    speed_grades=['-4',],
     temp_grade='C')
 spartan3a_grid['vendor'] = "Xilinx"
 spartan3a_grid['familyname'] = "Spartan3A"

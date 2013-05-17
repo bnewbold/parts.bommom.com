@@ -10,7 +10,6 @@ Max Differential I/O Pairs,54,54,72,72,54,54,72,72,144,240
 DSP48E1 Slices,60,120,180,240,60,120,180,240,240,740
 PCI Express,0,0,0,0,1,1,1,1,1,1
 AMS / XADC,1,1,1,1,1,1,1,1,1,1
-Configuration AES / HMAC Blocks,,,,,,,,,,
 GTP Transceivers (6.6 Gb/s Max Rate),N/A,N/A,N/A,N/A,4,4,8,8,8,16
 ###,HR Pins / HD Pins (GTP),,,,,,,,,
 CPG236,48/52,48/52,       ,       ,       ,       ,       ,       ,       ,       
