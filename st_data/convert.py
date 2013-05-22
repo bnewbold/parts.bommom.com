@@ -21,7 +21,7 @@ PREFIXES = [
 ]
 
 def decompose(mpn):
-    "returns (family, subfamily, memory, package"
+    "returns (family, subfamily, memory, package)"
     return mpn[:7], mpn[7:9], mpn[9], mpn[10]
 
 def ensure_recurse_dict(tree, addr):
@@ -52,7 +52,9 @@ for pref in PREFIXES:
     print "%s:" % pref
     print '\t' + '\n\t'.join([x['mpn'] for x in lists[pref]])
 
-family = lists[PREFIXES[1]]
+family_key = PREFIXES[1]
+family = lists[family_key]
+print "PROCESSING: " + family_key
 
 # strip common specifications
 family_specs = dict()
@@ -73,16 +75,48 @@ for part in family:
 
 print sorted(tree.keys())
 
-
-for subfamily in tree.items():
-    subfamily_keys = part.keys()
+for subfamily in tree.values():
+    subfamily_keys = part.keys() # old part from above
     subfamily_keys.remove('mpn')
+    uncommon_keys = list()
     for spec in subfamily_keys:
-        subfamily_items = 
-        if not identical([x[spec] for x in [pkg.items() for pkg in [mem.items() for mem in subfamily.items()]]]):
+        #subfamily_items = [p for p in [m for m in subfamily]]
+        if not identical([x[spec] for x in [pkg.values() for pkg in [mem.values() for mem in subfamily.values()]]]):
             subfamily_keys.remove(spec)
+            uncommon_keys.append(spec)
     print subfamily_keys
+    subfamily['_common_specs'] = subfamily_keys
+    subfamily['_uncommon_specs'] = uncommon_keys
 
+pkg_keys = []
+def csv_for_family():
+    part_dict = dict()
+    spec_list = []
+    for subfamily_key in sorted(family.keys()):
+        for mem_key in sorted(family[subfamily_key].keys()):
+            mem = family[subfamily_key][mem_key]
+            mem_part = mem.values()[0]
+            mem_part['Part Number'] = family_key + subfamily_key + "x" + mem_key
+            mem_part['PKG_PINS'] = dict()
+            for pkg_key in mem.keys():
+                if not pkg_key in pkg_keys:
+                    pkg_keys.append(pkg_key)
+                mem_part['PKG_PINS'][pkg_key] = mem[pkg_key]['I/O Pins']
+            part_dict[mem_part['Part Number']] = mem_part
+
+    sorted_part_names = sorted(part_dict.keys())
+    spec_list.remove('Part Number')
+    spec_list.insert(0,'Part Number')
+    for spec in spec_list:
+        # generate 'line' string of all parts for spec
+        pass
+
+
+
+print_family(family)
+
+"""
 def combine(tree, depth):
     if depth:
         combinel(
+"""
