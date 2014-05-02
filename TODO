@@ -1,0 +1,11 @@
+- all xilinx double-check, fine-print, notes, shared data (at top)
+- export/server csv or json including pricing
+- STM32 pages
+- Altera FPGA pages
+- freescale cortex-m3 pages
+- freezer should make a snapshot.tar.gz
+- freezer should use git to make source.tar.gz
+- favicon
+- robots.txt
+- /about
+- auto-routing, auto-index, auto-vendor-index
