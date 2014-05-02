@@ -8,3 +8,4 @@
 *.old
 build
 cache
+settings.py
